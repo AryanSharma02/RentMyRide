@@ -1,0 +1,17 @@
+.log{
+    background-color: #F8F8F8;
+    color: black;
+    width: 14rem;
+    margin-left: 5rem;
+    position: absolute;
+    margin-top: 3rem;
+    margin-left: 8rem;
+    width: 10rem;
+    font-size: 1.9rem;
+    height: 5rem;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+
+}

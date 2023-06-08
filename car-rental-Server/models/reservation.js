@@ -1,0 +1,77 @@
+import mongoose, { mongo } from "mongoose";
+
+const reserving = new mongoose.Schema({
+    f_name:{
+        type:String,
+        required:true,
+        trim:true,
+        min:5,
+        max:30
+    },
+    l_name:{
+        type:String,
+        trim:true,
+    },
+    phone:{
+        type:BigInt,
+        required:true
+    },
+    age:{
+        type:Number,
+        required:true
+    },
+    email:{
+        type:String,
+        required:true,
+        trim:true,
+        lowercase:true,        
+    },
+    city:{
+        type:String,
+        required:true,
+        trim:true,
+    },
+    zipcode:{
+        type:BigInt,
+        required:true,
+        trim:true,
+    },
+    cartype:{
+        type:String,
+        required:true,
+        trim:true,
+    },
+    pickup:{
+        type:String,
+        required:true,
+        trim:true,
+    },
+    dropoff:{
+        type:String,
+        required:true,
+        trim:true,
+    },
+    pickdate:{
+        type:Date,
+        required:true,
+        trim:true,
+    },
+    dropdate:{
+        type:Date,
+        required:true,
+        trim:true,
+    },
+    picktime:{
+        type:String,
+        required:true,
+        trim:true,
+    },
+    droptime:{
+        type:String,
+        required:true,
+        trim:true,
+    }
+});
+
+const reserve = mongoose.model('Reservation',reserving);
+export default reserve;
